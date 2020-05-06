@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "sleekdeals! An example React, GraphQL, Next and Apollo project",
+  "description": "flowersofearth! An example React, GraphQL, Next and Apollo project",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 7777",

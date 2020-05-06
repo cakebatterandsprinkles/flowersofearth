@@ -23,6 +23,10 @@ const MainContainer = styled.div`
   flex-direction: column;
 `;
 
+const ContentContainer = styled.div`
+  background: red;
+`;
+
 class Page extends Component {
   render() {
     return (
@@ -30,7 +34,7 @@ class Page extends Component {
         <MainContainer>
           <Meta />
           <Header />
-          {this.props.children}
+          <ContentContainer>{this.props.children}</ContentContainer>
         </MainContainer>
       </ThemeProvider>
     );
