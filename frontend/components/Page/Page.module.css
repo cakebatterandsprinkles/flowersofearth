@@ -1,5 +1,8 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .mainContainer {
   width: 100%;
-  height: 100%;
-  background-color: var(--tomato);
+  min-height: 100vh;
 }
