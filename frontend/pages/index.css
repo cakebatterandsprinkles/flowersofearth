@@ -1,0 +1,12 @@
+:root {
+  --black: #393939;
+  --gray: #342f2d;
+  --lightgray: #e1e1e1;
+  --smokeywhite: #ededed;
+  --crimson: #eb2557;
+  --tomato: #f15942;
+  --goldenrod: #f3a61d;
+  --teal: #269da1;
+  --max-width: 1000px;
+  --box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.9);
+}

@@ -1,8 +1,7 @@
 import Link from "next/link";
-import NavbarStyles from "./styledComponents/NavbarStyles";
 
 const Navbar = () => (
-  <NavbarStyles>
+  <div>
     <Link href="/">
       <a>About Us</a>
     </Link>
@@ -18,7 +17,7 @@ const Navbar = () => (
     <Link href="/login">
       <a>Login</a>
     </Link>
-  </NavbarStyles>
+  </div>
 );
 
 export default Navbar;
