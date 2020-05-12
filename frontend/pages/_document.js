@@ -7,7 +7,7 @@ class CustomDocument extends Document {
       <html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&family=Megrim&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&family=Megrim&family=Josefin+Slab:wght@600;700&display=swap"
             rel="stylesheet"
           />
         </Head>

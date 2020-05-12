@@ -1,0 +1,78 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.5rem;
+  height: 70vh;
+}
+
+.buttonMainContainer {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sloganWrapper {
+  text-align: center;
+  background: rgba(240, 239, 239, 0.774);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #e1d5d4, #b5b0bd);
+}
+
+.slogan {
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0.4rem 1rem 0.4rem 0;
+}
+
+.subheading {
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  .buttonMainContainer {
+    margin-top: 3.5rem;
+    flex-direction: column;
+  }
+  .buttonMainContainer {
+    height: 4.5rem;
+  }
+  .slogan {
+    font-size: 1.25rem;
+    margin-right: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .slogan {
+    font-size: 1rem;
+    margin: 0 0 0.4rem 0;
+    padding-right: 0.25rem;
+  }
+
+  .sloganWrapper {
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+}

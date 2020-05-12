@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Navbar.module.css";
 
-const Header = () => (
+const Navbar = () => (
   <div className={classes.navbar}>
     <Link href="/">
       <a>
@@ -27,4 +27,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Navbar;

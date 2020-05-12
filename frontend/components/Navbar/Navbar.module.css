@@ -1,14 +1,19 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
+  padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
 }
 
 .logo {
   padding-left: 2rem;
   max-width: 20rem;
   height: auto;
-  margin-right: 2rem;
 }
 
 .link {
