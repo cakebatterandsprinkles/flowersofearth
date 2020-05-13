@@ -25,9 +25,29 @@ const Home = (props) => {
         <img src="/field2.png" className={classes.image}></img>
       </div>
       <div className={classes.contentWrapper}>
-        <p className={classes.content}>
-          Find bouquets you'll love. Support local sellers. Protect the earth.
-        </p>
+        <p className={classes.header}>Who are we?</p>
+        <div className={classes.aboutUsContainer}>
+          <div className={classes.missionContainer}>
+            <img src="/trees.png" className={classes.missionImage}></img>
+            <p className={classes.heading}>
+              We are a community that cares about the world.
+            </p>
+            <p className={classes.content}>
+              We support profitable, small-scale flower farming. By locally
+              resourcing your flowers, you can reduce your carbon footprint.{" "}
+            </p>
+          </div>
+          <div className={classes.missionContainer}>
+            <img src="/market.png" className={classes.missionImage}></img>
+            <p className={classes.heading}>
+              We support local resources, gardeners and artists.
+            </p>
+            <p className={classes.content}>
+              We believe everybody can grow flowers. Collaborate with local
+              artists and make amazing bouquets!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
