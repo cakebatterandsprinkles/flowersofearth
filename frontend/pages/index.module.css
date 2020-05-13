@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 5.5rem;
-  height: 70vh;
+  height: 100vh;
 }
 
 .buttonMainContainer {
@@ -25,7 +25,7 @@
 .sloganWrapper {
   text-align: center;
   background: rgba(240, 239, 239, 0.774);
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
   display: flex;
   justify-content: center;

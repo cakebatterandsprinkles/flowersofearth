@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./index.module.css";
 import Button from "../components/Button/Button";
+import Footer from "../components/Footer/Footer";
 
 const Home = (props) => {
   return (
@@ -49,6 +50,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

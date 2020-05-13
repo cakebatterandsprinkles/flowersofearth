@@ -1,0 +1,43 @@
+.footerImage {
+  background: rgb(238, 238, 238);
+  width: 100%;
+  height: auto;
+}
+
+.footerContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMediaIcons {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 0.5rem;
+}
+
+.iconContainer {
+  margin: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 50px;
+}
+
+.iconContainer:hover {
+  background: rgb(214, 214, 214);
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 750px) {
+}
