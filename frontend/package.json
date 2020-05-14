@@ -37,6 +37,7 @@
     "react-adopt": "^0.6.0",
     "react-apollo": "^2.2.1",
     "react-dom": "^16.5.2",
+    "react-modal": "^3.11.2",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^2.5.0",
     "waait": "^1.0.2"

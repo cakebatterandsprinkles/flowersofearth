@@ -33,11 +33,151 @@
   margin: 0 2rem;
 }
 
+/* Modal Styling */
+.modal {
+  height: 50vh;
+  width: 40vw;
+  background-color: white;
+  z-index: 12;
+  border-radius: 1rem;
+}
+
+.overlay {
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(12, 12, 12, 0.534);
+}
+
+.modalMainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+}
+
+.modalLogo {
+  align-self: center;
+  padding-left: 2rem;
+  max-width: 20rem;
+  height: auto;
+  padding: 2rem 2rem 0.5rem 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--black);
+}
+
+.closingButton {
+  height: 2rem;
+  width: auto;
+}
+
+.closingButton:hover {
+  cursor: pointer;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0 0 3px #5e5e5e;
+}
+
+.closingButtonContainer {
+  margin-left: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modalContent {
+  padding: 0 3rem;
+}
+
+.subText {
+  font-size: 0.8rem;
+  display: inline;
+}
+
+.subLink {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--teal);
+  margin-left: 0.3rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-family: "Josefin Slab", serif;
+  margin-bottom: 0;
+}
+
+.loginForm {
+  margin-top: 2rem;
+}
+
+.formGroupContainer {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.formGroupContainer input {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  width: 80%;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+}
+
+.formGroupContainer label {
+  font-size: 0.9rem;
+  width: 30%;
+  padding-top: 0.5rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-left: auto;
+  margin-top: 1rem;
+  color: white;
+  background-color: var(--black);
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.btn:focus,
+.modal:focus,
+.formGroupContainer input {
+  outline: none;
+}
+
+@media (max-width: 1300px) {
+  .modal {
+    width: 50vw;
+  }
+}
+
 @media (max-width: 1000px) {
   .navbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .modal {
+    width: 60vw;
+  }
+
+  .modalContent {
+    padding: 0 2.5rem;
   }
 
   .logo {
@@ -49,5 +189,29 @@
 
   .link {
     margin-right: 1rem;
+  }
+
+  .closingButton {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .closingButtonContainer {
+    top: 1.75rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .modal {
+    width: 80vw;
+  }
+
+  .modalContent {
+    padding: 0 2rem;
+  }
+
+  .modalLogo {
+    max-width: 18rem;
   }
 }
