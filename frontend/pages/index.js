@@ -23,7 +23,7 @@ const Home = (props) => {
         <p className={classes.slogan}>Protect the earth.</p>
       </div>
       <div>
-        <img src="/field2.png" className={classes.image}></img>
+        <img src="/field.png" className={classes.image}></img>
       </div>
       <div className={classes.contentWrapper}>
         <p className={classes.header}>Who are we?</p>

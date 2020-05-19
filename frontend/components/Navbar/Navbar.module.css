@@ -35,8 +35,8 @@
 
 /* Modal Styling */
 .modal {
-  height: 50vh;
-  width: 40vw;
+  height: auto;
+  width: 30vw;
   background-color: white;
   z-index: 12;
   border-radius: 1rem;
@@ -73,7 +73,7 @@
 }
 
 .closingButton {
-  height: 2rem;
+  height: 1.5rem;
   width: auto;
 }
 
@@ -113,26 +113,29 @@
   margin-bottom: 0;
 }
 
-.loginForm {
+.form {
   margin-top: 2rem;
 }
 
 .formGroupContainer {
   display: flex;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+  margin-right: 1rem;
 }
 
 .formGroupContainer input {
   padding: 0.5rem;
-  font-size: 0.9rem;
-  width: 80%;
-  border: 1px solid var(--black);
+  font-size: 0.8rem;
+  width: 100%;
+  border: 1px solid gray;
   border-radius: 10px;
 }
 
 .formGroupContainer label {
+  margin-bottom: 0.3rem;
   font-size: 0.9rem;
-  width: 30%;
+  width: 35%;
   padding-top: 0.5rem;
 }
 
@@ -140,8 +143,7 @@
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-  margin-left: auto;
-  margin-top: 1rem;
+  margin: 1rem 0 2rem auto;
   color: white;
   background-color: var(--black);
   cursor: pointer;
@@ -155,8 +157,9 @@
 
 .btn:focus,
 .modal:focus,
-.formGroupContainer input {
+.formGroupContainer input:focus {
   outline: none;
+  box-shadow: var(--lightbs);
 }
 
 @media (max-width: 1300px) {
@@ -189,11 +192,6 @@
 
   .link {
     margin-right: 1rem;
-  }
-
-  .closingButton {
-    height: 1.5rem;
-    width: auto;
   }
 
   .closingButtonContainer {

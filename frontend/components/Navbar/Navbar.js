@@ -7,36 +7,81 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
+  const [isSignupSubmitted, setIsSignupSubmitted] = useState(false);
+  const [isLoginSubmitted, setIsLoginSubmitted] = useState(false);
 
-  const handleOpenModal = () => {
-    setShowModal(true);
+  const handleLoginOpenModal = () => {
+    setIsLogin(true);
+    setIsSignup(false);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+  const handleLoginCloseModal = () => {
+    setIsLogin(false);
   };
 
-  const handleSubmit = () => {
-    setIsSubmitted(true);
+  const handleLoginSubmit = () => {
+    setIsLoginSubmitted(true);
+  };
+
+  const handleSignupOpenModal = () => {
+    setIsLogin(false);
+    setIsSignup(true);
+  };
+
+  const handleSignupCloseModal = () => {
+    setIsSignup(false);
+  };
+
+  const handleSignupSubmit = () => {
+    setIsSignupSubmitted(true);
+  };
+
+  const setHeader = () => {
+    if (isLogin && !isSignup) {
+      return "Login";
+    } else if (!isLogin && isSignup) {
+      return "Sign up";
+    }
+  };
+
+  const setSubText = () => {
+    if (isLogin && !isSignup) {
+      return "Don't have an account?";
+    } else if (!isLogin && isSignup) {
+      return "Already have an account?";
+    }
+  };
+
+  const setLink = () => {
+    if (isLogin && !isSignup) {
+      return "Sign up";
+    } else if (!isLogin && isSignup) {
+      return "Login";
+    }
   };
 
   const renderModalContent = () => {
-    if (!isSubmitted) {
-      return (
-        <Fragment>
-          <div className={classes.modalMainContainer}>
+    return (
+      <Fragment>
+        <div className={classes.modalMainContainer}>
+          <Link href="/">
+            <img src="/logo.png" alt="logo" className={classes.modalLogo} />
+          </Link>
+          <div className={classes.modalContent}>
+            <p className={classes.heading}>{setHeader()}</p>
+            <p className={classes.subText}>{setSubText()}</p>
             <Link href="/">
-              <img src="/logo.png" alt="logo" className={classes.modalLogo} />
-            </Link>
-            <div className={classes.modalContent}>
-              <p className={classes.heading}>Login</p>
-              <p className={classes.subText}>Don't have an account?</p>
-              <a className={classes.subLink} href="/signup">
-                Sign up.
+              <a
+                className={classes.subLink}
+                onClick={isLogin ? handleSignupOpenModal : handleLoginOpenModal}
+              >
+                {setLink()}
               </a>
-              <form className={classes.loginForm}>
+            </Link>
+            {isLogin ? (
+              <form className={classes.form}>
                 <div className={classes.formGroupContainer}>
                   <label htmlFor="user-email">E-mail address:</label>
                   <input type="email" name="user-email" id="user-email"></input>
@@ -50,29 +95,52 @@ const Navbar = () => {
                   ></input>
                 </div>
               </form>
-              <button onClick={handleSubmit} className={classes.btn}>
-                Login
-              </button>
-            </div>
-            <div className={classes.closingButtonContainer}>
-              <img
-                src="/closeButton.png"
-                className={classes.closingButton}
-                onClick={handleCloseModal}
-              />
-            </div>
+            ) : (
+              <form className={classes.form}>
+                <div className={classes.formGroupContainer}>
+                  <label htmlFor="username">Username:</label>
+                  <input type="text" name="username" id="username"></input>
+                </div>
+                <div className={classes.formGroupContainer}>
+                  <label htmlFor="user-email">E-mail address:</label>
+                  <input type="email" name="user-email" id="user-email"></input>
+                </div>
+                <div className={classes.formGroupContainer}>
+                  <label htmlFor="user-password">Password:</label>
+                  <input
+                    type="password"
+                    name="user-password"
+                    id="user-password"
+                  ></input>
+                </div>
+                <div className={classes.formGroupContainer}>
+                  <label htmlFor="repeat-password">Repeat password:</label>
+                  <input
+                    type="password"
+                    name="repeat-password"
+                    id="repeat-password"
+                  ></input>
+                </div>
+              </form>
+            )}
+
+            <button
+              onClick={isLogin ? handleLoginSubmit : handleSignupSubmit}
+              className={classes.btn}
+            >
+              {setHeader()}
+            </button>
           </div>
-        </Fragment>
-      );
-    } else if (isSubmitted) {
-      return (
-        <div className={classes.submitModalContainer}>
-          <img src={Sun} alt="sunimage" className={classes.birbImage} />
-          <p>Congrats, you've got an email! Check your inbox.</p>
+          <div className={classes.closingButtonContainer}>
+            <img
+              src="/closeButton.png"
+              className={classes.closingButton}
+              onClick={isLogin ? handleLoginCloseModal : handleSignupCloseModal}
+            />
+          </div>
         </div>
-      );
-    }
-    return <p>Oops something is wrong!</p>;
+      </Fragment>
+    );
   };
 
   let currentModal = renderModalContent();
@@ -94,14 +162,16 @@ const Navbar = () => {
           </a>
         </Link>
         <Link href="/">
-          <div className={classes.link} onClick={handleOpenModal}>
+          <div className={classes.link} onClick={handleLoginOpenModal}>
             Login
           </div>
         </Link>
       </div>
       <Modal
-        isOpen={showModal}
-        onRequestClose={handleCloseModal}
+        isOpen={isLogin || isSignup}
+        onRequestClose={
+          isLogin ? handleLoginCloseModal : handleSignupCloseModal
+        }
         className={classes.modal}
         overlayClassName={classes.overlay}
         ariaHideApp={false}
